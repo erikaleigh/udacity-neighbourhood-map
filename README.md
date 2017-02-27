@@ -16,5 +16,6 @@ For completion of [Udacity's Front-End Web Developer Nanodegree](https://www.uda
 
 **Extra Help**
 - Extra help for AJAX requests using jQuery from Chapter 8 the book [Javascript & jQuery: Interactive Front-End Development](http://javascriptbook.com/) by John Duckett, and [Udacity's Intro to AJAX course](https://www.udacity.com/course/intro-to-ajax--ud110)
-- Used instructions for loading a Google Maps Javascript API from Google's documentation [here](https://developers.google.com/maps/documentation/javascript/tutorial)
+- Used instructions for loading a Google Maps Javascript API from [Google's documentation](https://developers.google.com/maps/documentation/javascript/tutorial)
+- Extra help for setting up markers and info windows from [Udacity's Google Maps API course](https://www.udacity.com/course/google-maps-apis--ud864)
 - Syntax for error handling for Google Maps API load inspired by [this](https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282/33?) Udacity forum discussion
