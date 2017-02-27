@@ -9,13 +9,13 @@ var viewModel =  {
 };
 
 // google maps javascript api
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 45.5017, lng: -73.5673},
-      zoom: 12
-  });
-}
+// var map;
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById('map'), {
+//       center: {lat: 45.5017, lng: -73.5673},
+//       zoom: 12
+//   });
+// }
 
 // error handling for google maps api
 function googleErrorHandling() {
@@ -30,30 +30,50 @@ function googleErrorHandling() {
 
 // google maps ajax request to get lat/lng of addresses for markers
 
-function loadLatLng() {
+function initMap() {
 
   var list = $('#list');
   var geocoder;
-
-  function initialize() {
-    geocoder = new google.maps.Geocoder();
-  }
+  var map;
   // addresses: Patati Patata[0], Qing Hua[1], Majestique[2], Resonance Cafe[3], Dispatch[4], Pikolo[5], Bar le Ritz[6], North Star[7], Brasserie Harricana[8]
   var address = ["4177+StLaurent+Boulevard", "1676+Lincoln+Ave", "4105+StLaurent+Boulevard", "5175A+Ave+DuParc", "267+Rue+StZotique", "3418+Ave+DuParc", "179+Rue+JeanTalonOuest", "3908+StLaurent+Boulevard", "95+Rue+JeanTalonOuest"];
 
-  for(i = 0; i < address.length; i++) {
-      var googleURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address[i] + ",+Montreal,+QC&key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY";
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(45.5017, -73.5673);
+    var mapOptions = {
+      zoom: 12,
+      center: latlng
+    }
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  }
 
-      $.ajax({
-        type: "GET",
-        url: googleURL,
-      }).done(function() {
-          list.append(results[i].geometry);
-      }).fail(function() {
-          alert('fail');
+  function codeAddress() {
+    for (i = 0; i < address.length; i++) {
+      var address = address[i];
+      geocoder.geocode( { 'address': address }, function(results,status ) {
+        if (status === 'OK') {
+          var marker = new google.maps.Marker({
+            map: map,
+            position: results[i].geometry.location
+          });
+        } else {
+          alert("FAILED BECAUSE" + status);
+        }
       });
-  };
+    }
+  }
+
+  //     $.ajax({
+  //       type: "GET",
+  //       url: googleURL,
+  //     }).done(function() {
+  //         list.append();
+  //     }).fail(function() {
+  //         alert('fail');
+  //     });
+  // };
 
 
 };
-loadLatLng();
+initMap();
