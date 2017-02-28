@@ -5,7 +5,7 @@
     <title>Montréal Neighbourhood Map</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body on load="codeAddress()">
     <div id="map"></div>
     <div id="list"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="googleErrorHandling()"

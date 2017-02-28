@@ -1,16 +1,18 @@
 // model - data storage
 
 // addresses: Patati Patata[0], Qing Hua[1], Majestique[2], Resonance Cafe[3], Dispatch[4], Pikolo[5], Bar le Ritz[6], North Star[7], Brasserie Harricana[8]
- var address = ["4177+StLaurent+Boulevard", "1676+Lincoln+Ave", "4105+StLaurent+Boulevard", "5175A+Ave+DuParc", "267+Rue+StZotique", "3418+Ave+DuParc", "179+Rue+JeanTalonOuest", "3908+StLaurent+Boulevard", "95+Rue+JeanTalonOuest"];
+var Model = [
 
+ addresses = ["4177+StLaurent+Boulevard", "1676+Lincoln+Ave", "4105+StLaurent+Boulevard", "5175A+Ave+DuParc", "267+Rue+StZotique", "3418+Ave+DuParc", "179+Rue+JeanTalonOuest", "3908+StLaurent+Boulevard", "95+Rue+JeanTalonOuest"]
 
+]
 // view model - data control and storage
 
 var viewModel =  {
 
 };
 
-// google maps javascript api - map initialization and markers
+// google maps javascript api map initialization and markers
 var map;
 var list = $('#list');
 var geocoder;
@@ -27,10 +29,10 @@ function initMap() {
       geocoder.geocode( { 'address': address }, function(results, status) {
         if (status == 'OK') {
           console.log(status);
-          map.setCenter(results[0].geometry.location);
+          map.setCenter(results.geometry.location);
           var marker = new google.maps.Marker({
             map: map,
-            position: results[0].geometry.location
+            position: results.geometry.location
           });
         } else {
           alert("FAILED BECAUSE" + status);
