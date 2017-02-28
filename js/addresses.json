@@ -1,0 +1,685 @@
+/* Patati Patata */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "4177",
+               "short_name" : "4177",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Boulevard Saint-Laurent",
+               "short_name" : "Boul St-Laurent",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Le Plateau-Mont-Royal",
+               "short_name" : "Le Plateau-Mont-Royal",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2W 1Y7",
+               "short_name" : "H2W 1Y7",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "4177 Boul St-Laurent, Montréal, QC H2W 1Y7, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.51808800000001,
+               "lng" : -73.58135759999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.51943698029151,
+                  "lng" : -73.58000861970848
+               },
+               "southwest" : {
+                  "lat" : 45.51673901970851,
+                  "lng" : -73.58270658029149
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJ79-MN80byUwRQi0ZtH2adKE",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Qing Hua */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1676",
+               "short_name" : "1676",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Avenue Lincoln",
+               "short_name" : "Avenue Lincoln",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Ville-Marie",
+               "short_name" : "Ville-Marie",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H3H 1G9",
+               "short_name" : "H3H 1G9",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "1676 Avenue Lincoln, Montréal, QC H3H 1G9, Canada",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 45.4953826,
+                  "lng" : -73.58109019999999
+               },
+               "southwest" : {
+                  "lat" : 45.49537429999999,
+                  "lng" : -73.58110479999999
+               }
+            },
+            "location" : {
+               "lat" : 45.4953826,
+               "lng" : -73.58110479999999
+            },
+            "location_type" : "RANGE_INTERPOLATED",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.49672743029149,
+                  "lng" : -73.57974851970849
+               },
+               "southwest" : {
+                  "lat" : 45.4940294697085,
+                  "lng" : -73.58244648029149
+               }
+            }
+         },
+         "place_id" : "EjIxNjc2IEF2ZW51ZSBMaW5jb2xuLCBNb250csOpYWwsIFFDIEgzSCAxRzksIENhbmFkYQ",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Majestique */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "4105",
+               "short_name" : "4105",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Boulevard Saint-Laurent",
+               "short_name" : "Boul St-Laurent",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Le Plateau-Mont-Royal",
+               "short_name" : "Le Plateau-Mont-Royal",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2W 1Y7",
+               "short_name" : "H2W 1Y7",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "4105 Boul St-Laurent, Montréal, QC H2W 1Y7, Canada",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 45.5176471,
+                  "lng" : -73.5801891
+               },
+               "southwest" : {
+                  "lat" : 45.517478,
+                  "lng" : -73.580378
+               }
+            },
+            "location" : {
+               "lat" : 45.5175626,
+               "lng" : -73.58028349999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.5189115302915,
+                  "lng" : -73.57893456970848
+               },
+               "southwest" : {
+                  "lat" : 45.5162135697085,
+                  "lng" : -73.5816325302915
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJxTHk1cwbyUwRGvO3_FnY-qI",
+         "types" : [ "premise" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Resonance Cafe */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "5175A",
+               "short_name" : "5175A",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Avenue du Parc",
+               "short_name" : "Av du Parc",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Le Plateau-Mont-Royal",
+               "short_name" : "Le Plateau-Mont-Royal",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2V 4G3",
+               "short_name" : "H2V 4G3",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "5175A Av du Parc, Montréal, QC H2V 4G3, Canada",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 45.5205691,
+                  "lng" : -73.59705389999999
+               },
+               "southwest" : {
+                  "lat" : 45.5203936,
+                  "lng" : -73.5972601
+               }
+            },
+            "location" : {
+               "lat" : 45.5204813,
+               "lng" : -73.597157
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.5218303302915,
+                  "lng" : -73.5958080197085
+               },
+               "southwest" : {
+                  "lat" : 45.5191323697085,
+                  "lng" : -73.59850598029151
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJz53lkn8ZyUwRd9FgIlpJFnU",
+         "types" : [ "premise" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Dispatch */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "267",
+               "short_name" : "267",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rue Saint Zotique Ouest",
+               "short_name" : "Rue Saint Zotique O",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Rosemont—La Petite-Patrie",
+               "short_name" : "Rosemont—La Petite-Patrie",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2V 1A4",
+               "short_name" : "H2V 1A4",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "267 Rue Saint Zotique O, Montréal, QC H2V 1A4, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.5289229,
+               "lng" : -73.6160596
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.53027188029149,
+                  "lng" : -73.6147106197085
+               },
+               "southwest" : {
+                  "lat" : 45.5275739197085,
+                  "lng" : -73.61740858029151
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJt1d8OXMZyUwReuUbWwwXGNQ",
+         "types" : [ "street_address" ]
+      },
+   ],
+   "status" : "OK"
+}
+
+/* Pikolo */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "3418",
+               "short_name" : "3418",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Avenue du Parc",
+               "short_name" : "Av du Parc",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Le Plateau-Mont-Royal",
+               "short_name" : "Le Plateau-Mont-Royal",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2X 2H5",
+               "short_name" : "H2X 2H5",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "3418 Av du Parc, Montréal, QC H2X 2H5, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.5085961,
+               "lng" : -73.5717465
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.5099450802915,
+                  "lng" : -73.57039751970849
+               },
+               "southwest" : {
+                  "lat" : 45.5072471197085,
+                  "lng" : -73.57309548029151
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJVRUn_EgayUwRwbSUm4Bo6m8",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Bar le Ritz */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "179",
+               "short_name" : "179",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rue Jean-Talon Ouest",
+               "short_name" : "Rue Jean-Talon Ouest",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Villeray—Saint-Michel—Parc-Extension",
+               "short_name" : "Villeray—Saint-Michel—Parc-Extension",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montreal",
+               "short_name" : "Montreal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Montreal",
+               "short_name" : "Montreal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2R 2Y9",
+               "short_name" : "H2R 2Y9",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "179 Rue Jean-Talon Ouest, Montreal, QC H2R 2Y9, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.5326855,
+               "lng" : -73.6203424
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.5340344802915,
+                  "lng" : -73.61899341970849
+               },
+               "southwest" : {
+                  "lat" : 45.5313365197085,
+                  "lng" : -73.62169138029149
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJKw0k9A0ZyUwR5I0IW-sy5d8",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* North Star */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "3908",
+               "short_name" : "3908",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Boulevard Saint-Laurent",
+               "short_name" : "Boul St-Laurent",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Le Plateau-Mont-Royal",
+               "short_name" : "Le Plateau-Mont-Royal",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montréal",
+               "short_name" : "Montréal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Communauté-Urbaine-de-Montréal",
+               "short_name" : "Communauté-Urbaine-de-Montréal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2W 1Y2",
+               "short_name" : "H2W 1Y2",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "3908 Boul St-Laurent, Montréal, QC H2W 1Y2, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.5163155,
+               "lng" : -73.5782292
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.51766448029149,
+                  "lng" : -73.57688021970849
+               },
+               "southwest" : {
+                  "lat" : 45.5149665197085,
+                  "lng" : -73.57957818029151
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJFYlDWjMayUwR4gZzWrRe450",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+/* Brasserie Harricana */
+
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "95",
+               "short_name" : "95",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rue Jean-Talon Ouest",
+               "short_name" : "Rue Jean-Talon Ouest",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Villeray—Saint-Michel—Parc-Extension",
+               "short_name" : "Villeray—Saint-Michel—Parc-Extension",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "Montreal",
+               "short_name" : "Montreal",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Montreal",
+               "short_name" : "Montreal",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Québec",
+               "short_name" : "QC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Canada",
+               "short_name" : "CA",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "H2R 2W8",
+               "short_name" : "H2R 2W8",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "95 Rue Jean-Talon Ouest, Montreal, QC H2R 2W8, Canada",
+         "geometry" : {
+            "location" : {
+               "lat" : 45.5337701,
+               "lng" : -73.61937089999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 45.5351190802915,
+                  "lng" : -73.6180219197085
+               },
+               "southwest" : {
+                  "lat" : 45.5324211197085,
+                  "lng" : -73.6207198802915
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJ-Q-mFBIZyUwRbsIXdL5CKNQ",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}

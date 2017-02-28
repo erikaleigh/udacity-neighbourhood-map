@@ -15,31 +15,12 @@ var viewModel =  {
 // google maps javascript api map initialization and markers
 var map;
 var list = $('#list');
-var geocoder;
 
 function initMap() {
-  geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5017, lng: -73.5673},
       zoom: 12
   });
-
-  function codeAddress() {
-      var address = "4177 St Laurent Boulevard, Montreal, QC";
-      geocoder.geocode( { 'address': address }, function(results, status) {
-        if (status == 'OK') {
-          console.log(status);
-          map.setCenter(results.geometry.location);
-          var marker = new google.maps.Marker({
-            map: map,
-            position: results.geometry.location
-          });
-        } else {
-          alert("FAILED BECAUSE" + status);
-        }
-      });
-    };
-}
 
 // error handling for google maps api
 function googleErrorHandling() {
@@ -50,4 +31,5 @@ function googleErrorHandling() {
 
   errorDiv.innerHTML = errorMsg;
   mapDiv.appendChild(errorDiv);
+}
 };
