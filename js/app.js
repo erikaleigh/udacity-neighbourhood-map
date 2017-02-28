@@ -1,5 +1,7 @@
 // model - data storage
 
+// addresses: Patati Patata[0], Qing Hua[1], Majestique[2], Resonance Cafe[3], Dispatch[4], Pikolo[5], Bar le Ritz[6], North Star[7], Brasserie Harricana[8]
+ var address = ["4177+StLaurent+Boulevard", "1676+Lincoln+Ave", "4105+StLaurent+Boulevard", "5175A+Ave+DuParc", "267+Rue+StZotique", "3418+Ave+DuParc", "179+Rue+JeanTalonOuest", "3908+StLaurent+Boulevard", "95+Rue+JeanTalonOuest"];
 
 
 // view model - data control and storage
@@ -8,30 +10,17 @@ var viewModel =  {
 
 };
 
-// google maps javascript api
+// google maps javascript api - map initialization and markers
 var map;
 var list = $('#list');
 var geocoder;
 
 function initMap() {
+  geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5017, lng: -73.5673},
       zoom: 12
   });
-
-  // addresses: Patati Patata[0], Qing Hua[1], Majestique[2], Resonance Cafe[3], Dispatch[4], Pikolo[5], Bar le Ritz[6], North Star[7], Brasserie Harricana[8]
-
-  //  var address = ["4177+StLaurent+Boulevard", "1676+Lincoln+Ave", "4105+StLaurent+Boulevard", "5175A+Ave+DuParc", "267+Rue+StZotique", "3418+Ave+DuParc", "179+Rue+JeanTalonOuest", "3908+StLaurent+Boulevard", "95+Rue+JeanTalonOuest"];
-
-  function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(45.5017, -73.5673);
-    var mapOptions = {
-      zoom: 12,
-      center: latlng
-    }
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  }
 
   function codeAddress() {
       var address = "4177 St Laurent Boulevard, Montreal, QC";
@@ -48,8 +37,6 @@ function initMap() {
         }
       });
     };
-
-  initialize();
 }
 
 // error handling for google maps api
