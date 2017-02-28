@@ -32,12 +32,19 @@ var map;
 var markers = [];
 var list = $('#list');
 
+
+// initialize Google Map
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5017, lng: -73.5673},
-      zoom: 12
+      zoom: 13
   });
 
+// initialize info windows
+var infoWindow = new google.maps.InfoWindow();
+
+
+// Add markers from locations listed in Model.locations
 for (i = 0; i < locations.length; i++) {
   var position = locations[i].location;
   var title = locations[i].title;
@@ -49,6 +56,24 @@ for (i = 0; i < locations.length; i++) {
     animation: google.maps.Animation.DROP,
   });
   markers.push(marker);
+
+  // click event for each marker to open infowindow. 'this' = marker
+  marker.addListener('click', function() {
+    populateInfoWindow(this, infoWindow);
+  });
+
+  /* populates the infowindow when the marker is clicked. Checks to make sure info window is not already open before performing function, if not, opens the info window, sets the marker title in the window */
+  function populateInfoWindow(marker, infowindow) {
+    if (infowindow.marker != marker) {
+      infowindow.marker = marker;
+      infowindow.setContent('<div>' + marker.title + '</div>');
+      infowindow.open(map, marker);
+      infowindow.addListener('closeclick', function() {
+        infowindow.setMarker(null);
+      });
+    }
+  }
+
 }
 
 
