@@ -5,9 +5,13 @@
     <title>Montréal Neighbourhood Map</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body on load="codeAddress()">
+  <body>
+    <section class="container">
+      <section class="list-box">
+        <h1>Montréal Métro Photobooth Map!</h1>
+      </section>
+    </section>
     <div id="map"></div>
-    <div id="list"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="googleErrorHandling()"
    async defer></script>
    <script src="js/libs/jquery-3.1.1.min.js"></script>

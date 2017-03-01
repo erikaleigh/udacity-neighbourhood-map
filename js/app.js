@@ -1,24 +1,20 @@
 // model - data storage
 
-// addresses: Patati Patata[0], Qing Hua[1], Majestique[2], Resonance Cafe[3], Dispatch[4], Pikolo[5], Bar le Ritz[6], North Star[7], Brasserie Harricana[8]
 var Model = [
 
  locations = [
-   {title: "Patati Patata Friterie de Luxe", location: {lat: 45.51808800000001, lng: -73.58135759999999}},
-   {title: "Qing Hua", location: {lat: 45.4953826, lng: -73.58110479999999}},
-   {title: "Majestique", location: {lat: 45.5175626, lng: -73.58028349999999}},
-   {title: "Resonance Café", location: {lat: 45.5204813, lng: -73.597157}},
-   {title: "Café Dispatch", location: {lat: 45.5289229, lng: -73.6160596}},
-   {title: "Café Pikolo", location: {lat: 45.5085961, lng: -73.5717465}},
-   {title: "Bar le Ritz PDB", location: {lat: 45.5326855, lng: -73.6203424}},
-   {title: "North Star Pinball", location: {lat: 45.5163155, lng: -73.5782292}},
-   {title: "Brasserie Harricana", location: {lat: 45.5337701, lng: -73.61937089999999}},
+   {title: "Metro McGill", location: {lat: 45.5045824, lng: -73.5718572}},
+   {title: "Metro Place des Arts", location: {lat: 45.5081846, lng: -73.5679968}},
+   {title: "Metro Berri-UQAM", location: {lat: 45.5141806, lng: -73.5617994}},
+   {title: "Metro Peel", location: {lat: 45.50083, lng: -73.5752449}},
+   {title: "Metro Laurier", location: {lat: 45.527522, lng: -73.58905589999999 }},
+   {title: "Metro Sherbrooke", location: {lat: 45.5190038, lng: -73.5681311}},
+   {title: "Metro Jarry", location: {lat: 45.5433543, lng: -73.6285032}},
+   {title: "Metro Jean-Talon", location: {lat: 45.5389207, lng: -73.6141987}},
+   {title: "Metro Bonaventure", location: {lat: 45.497977, lng: -73.5676258}},
+   {title: "Metro Atwater", location: {lat: 45.4898065, lng: -73.58632469999999}},
+   {title: "Metro St-Michel", location: {lat: 45.5599217, lng: -73.6000536}},
  ]
-
-
-
-
-
 ]
 
 // view model - data control and storage
@@ -39,6 +35,9 @@ function initMap() {
       center: {lat: 45.5017, lng: -73.5673},
       zoom: 13
   });
+  // set transit layer styling
+  var transitLayer = new google.maps.TransitLayer();
+         transitLayer.setMap(map);
 
 // initialize info windows
 var infoWindow = new google.maps.InfoWindow();
@@ -57,10 +56,15 @@ for (i = 0; i < locations.length; i++) {
   });
   markers.push(marker);
 
-  // click event for each marker to open infowindow. 'this' = marker
+/* click event for each marker to open infowindow. change icon to green when clicked. 'this' = marker */
   marker.addListener('click', function() {
     populateInfoWindow(this, infoWindow);
+    this.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
   });
+
+  // marker.addListener('closeclick', function() {
+  //   this.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+  // });
 
   /* populates the infowindow when the marker is clicked. Checks to make sure info window is not already open before performing function, if not, opens the info window, sets the marker title in the window */
   function populateInfoWindow(marker, infowindow) {
@@ -75,8 +79,6 @@ for (i = 0; i < locations.length; i++) {
   }
 
 }
-
-
 
 // error handling for google maps api
 function googleErrorHandling() {
