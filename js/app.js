@@ -5,14 +5,15 @@ var Model = [
  locations = [
    {title: "Metro McGill", location: {lat: 45.5045824, lng: -73.5718572}},
    {title: "Metro Place des Arts", location: {lat: 45.5081846, lng: -73.5679968}},
-   {title: "Metro Berri-UQAM", location: {lat: 45.5141806, lng: -73.5617994}},
    {title: "Metro Peel", location: {lat: 45.50083, lng: -73.5752449}},
+   {title: "Metro Atwater", location: {lat: 45.4898065, lng: -73.58632469999999}},
+   {title: "Metro Berri-UQAM", location: {lat: 45.5141806, lng: -73.5617994}},
    {title: "Metro Laurier", location: {lat: 45.527522, lng: -73.58905589999999 }},
    {title: "Metro Sherbrooke", location: {lat: 45.5190038, lng: -73.5681311}},
    {title: "Metro Jarry", location: {lat: 45.5433543, lng: -73.6285032}},
-   {title: "Metro Jean-Talon", location: {lat: 45.5389207, lng: -73.6141987}},
+
    {title: "Metro Bonaventure", location: {lat: 45.497977, lng: -73.5676258}},
-   {title: "Metro Atwater", location: {lat: 45.4898065, lng: -73.58632469999999}},
+   {title: "Metro Jean-Talon", location: {lat: 45.5389207, lng: -73.6141987}},
    {title: "Metro St-Michel", location: {lat: 45.5599217, lng: -73.6000536}},
  ]
 ]
@@ -47,24 +48,22 @@ var infoWindow = new google.maps.InfoWindow();
 for (i = 0; i < locations.length; i++) {
   var position = locations[i].location;
   var title = locations[i].title;
+  var markerImg = 'img/camera.png';
 
   var marker = new google.maps.Marker({
     map: map,
     position: position,
     title: title,
+    icon: markerImg,
     animation: google.maps.Animation.DROP,
   });
   markers.push(marker);
 
-/* click event for each marker to open infowindow. change icon to green when clicked. 'this' = marker */
+/* click event for each marker to open infowindow. change icon to flash when clicked. 'this' = marker */
   marker.addListener('click', function() {
     populateInfoWindow(this, infoWindow);
-    this.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+    this.setIcon('img/flash.png');
   });
-
-  // marker.addListener('closeclick', function() {
-  //   this.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
-  // });
 
   /* populates the infowindow when the marker is clicked. Checks to make sure info window is not already open before performing function, if not, opens the info window, sets the marker title in the window */
   function populateInfoWindow(marker, infowindow) {
@@ -73,7 +72,8 @@ for (i = 0; i < locations.length; i++) {
       infowindow.setContent('<div>' + marker.title + '</div>');
       infowindow.open(map, marker);
       infowindow.addListener('closeclick', function() {
-        infowindow.setMarker(null);
+        infowindow.setMarker = null;
+        marker.setIcon('img/camera.png');
       });
     }
   }
