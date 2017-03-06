@@ -6,19 +6,32 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <!-- Open list container -->
     <section class="container">
-      <section class="list-box">
+      <section class="list">
         <h1>Montréal Métro Photobooth Map!</h1>
-        <ul data-bind="forEach: list">
-          <li data-bind="text: $data.title"></li>
+        <img src="img/camera.png">
+        <img src="img/flash.png">
+        <ul data-bind="forEach: Entry">
+          <li data-bind="text: $data"></li>
         </ul>
       </section>
+      <section class="credits">
+        <h5>Credits</h5>
+          <p>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/">Fight Boredom Distro</a>.
+          </p>
+          <p>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki API</a>
+          </p>
+      </section>
     </section>
+    <!-- Close container -->
+    <!-- Add Google map -->
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="googleErrorHandling()"
    async defer></script>
     <script src="js/libs/jquery-3.1.1.min.js"></script>
     <script src="js/libs/knockout-3.4.1.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
