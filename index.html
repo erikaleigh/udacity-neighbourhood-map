@@ -9,19 +9,18 @@
   <!-- Open list container -->
     <section class="container">
       <section class="list">
-        <h1>Montréal Métro Photobooth Map!</h1>
+        <h1>Montréal Metro Photobooth Map!</h1>
         <img src="img/camera.png">
         <img src="img/flash.png">
-        <ul data-bind="forEach: Entry">
-          <li data-bind="text: $data"></li>
+        <ul data-bind="foreach: locationList">
+          <li data-bind="text: title"></li>
         </ul>
-      </section>
-      <section class="credits">
-        <h5>Credits</h5>
-          <p>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/">Fight Boredom Distro</a>.
+        <div class="credits">
+        <p>Credits
+          <br/>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/">Fight Boredom Distro</a>.
+          <br/>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki API</a>
           </p>
-          <p>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki API</a>
-          </p>
+        </div>
       </section>
     </section>
     <!-- Close container -->
