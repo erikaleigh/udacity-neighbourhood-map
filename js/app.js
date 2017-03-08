@@ -16,29 +16,32 @@
    {title: "Metro St-Michel", location: {lat: 45.5599217, lng: -73.6000536}},
 ];
 
-var Location = function(data) {
-  this.title = ko.observable(data.title);
-}
 
 
 // View Model - data control and storage
 
 var ViewModel = function() {
+  var self = this;
 
 /* Push the titles of all items in var locations to an observable array,
- * bound to the list view
+ * which is bound to the list view
  */
-  var self = this;
+ var Location = function(data) {
+   this.title = ko.observable(data.title);
+ };
+
   this.locationList = ko.observableArray([]);
 
   locations.forEach(function(locationItem) {
     self.locationList.push( new Location(locationItem));
-});
+  });
   this.currentLocation = ko.observable(this.locationList()[0]);
+
+// Knockout click event to initiate opening infoWindow when list item is clicked
+  this.markers = ko.observableArray([]);
+  this.openWindow = function(){
+    google.maps.event.trigger(markers[9], 'click');
+  }
 };
-
-
-
-
 // Apply Knockout.js bindings
 ko.applyBindings(new ViewModel());

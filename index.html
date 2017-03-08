@@ -13,7 +13,7 @@
         <img src="img/camera.png">
         <img src="img/flash.png">
         <ul data-bind="foreach: locationList">
-          <li data-bind="text: title"></li>
+          <li data-bind="text: title, click: $parent.openWindow"></li>
         </ul>
         <div class="credits">
         <p>Credits

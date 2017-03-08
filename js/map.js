@@ -4,6 +4,7 @@
  */
 
 var map;
+var marker;
 var markers = [];
 
 // Initialize Google Map
@@ -16,7 +17,7 @@ function initMap() {
   var transitLayer = new google.maps.TransitLayer();
          transitLayer.setMap(map);
 
-// Initialize info windows
+// Initialize info windows and map bounds
 var infoWindow = new google.maps.InfoWindow();
 var bounds = new google.maps.LatLngBounds();
 
@@ -26,7 +27,7 @@ for (i = 0; i < locations.length; i++) {
   var title = locations[i].title;
   var markerImg = 'img/camera.png';
 
-  var marker = new google.maps.Marker({
+  marker = new google.maps.Marker({
     map: map,
     position: position,
     title: title,
