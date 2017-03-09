@@ -30,17 +30,17 @@ var ViewModel = function() {
    this.title = ko.observable(data.title);
  };
 
-  this.locationList = ko.observableArray([]);
+  self.locationList = ko.observableArray([]);
 
   locations.forEach(function(locationItem) {
     self.locationList.push( new Location(locationItem));
   });
-  this.currentLocation = ko.observable(this.locationList()[0]);
+
 
 // Knockout click event to initiate opening infoWindow when list item is clicked
-  this.markers = ko.observableArray([]);
-  this.openWindow = function(){
-    google.maps.event.trigger(markers[9], 'click');
+  self.markers = ko.observableArray([]);
+  self.openWindow = function(){
+    google.maps.event.trigger(markers, 'click');
   }
 };
 // Apply Knockout.js bindings
