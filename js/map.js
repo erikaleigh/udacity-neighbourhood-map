@@ -11,7 +11,14 @@ var markers = [];
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5017, lng: -73.5673},
-      zoom: 13
+      zoom: 13,
+      styles: [
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{color: '#A7CAD7'}]
+        }
+      ]
   });
 // Set transit layer styling to make metro lines more visible
   var transitLayer = new google.maps.TransitLayer();
@@ -34,9 +41,8 @@ for (i = 0; i < locations.length; i++) {
     icon: markerImg,
     animation: google.maps.Animation.DROP,
   });
-  // markers.push(marker);
-  locations[i].marker = marker;
   bounds.extend(marker.position);
+
 
 /* Open info window and change marker to flash icon when marker is clicked
  * 'this' = marker
@@ -59,7 +65,9 @@ for (i = 0; i < locations.length; i++) {
         marker.setIcon('img/camera.png');
       });
     }
+    vm.locationList()[i].marker = marker;
   }
+
   map.fitBounds(bounds);
 }
 
@@ -73,6 +81,5 @@ function googleErrorHandling() {
   errorDiv.innerHTML = errorMsg;
   mapDiv.appendChild(errorDiv);
 }
-// Apply Knockout.js bindings
-ko.applyBindings(vm);
 };
+console.log(vm.locationList()[0]);

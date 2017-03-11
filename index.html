@@ -4,14 +4,24 @@
     <meta charset="utf-8">
     <title>Montréal Neighbourhood Map</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Space+Mono" rel="stylesheet">
   </head>
   <body>
   <!-- Open list container -->
     <section class="container">
-      <section class="list">
-        <h1>Montréal Metro Photobooth Map!</h1>
-        <img src="img/camera.png">
-        <img src="img/flash.png">
+      <section class="list-box">
+        <h1>Montréal Metro Photobooth Map!
+          <img src="img/camera.png">
+          <img src="img/flash.png"></h1>
+        <div class="menu">
+          <button class="menu-button">Select a Metro Line</button>
+            <div class="button-content">
+              <a href="#">Orange</a>
+              <a href="#">Green</a>
+              <a href="#">Yellow</a>
+              <a href="#">Blue</a>
+            </div>
+        </div>
         <ul data-bind="foreach: locationList">
           <li data-bind="text: title, click: $parent.openWindow"></li>
         </ul>
