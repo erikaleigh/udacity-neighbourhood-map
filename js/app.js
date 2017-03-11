@@ -39,9 +39,9 @@ var ViewModel = function() {
 
 // Knockout click event to initiate opening infoWindow when list item is clicked
   self.markers = ko.observableArray([]);
-  self.openWindow = function(){
-    google.maps.event.trigger(markers, 'click');
+  self.openWindow = function(place){
+    google.maps.event.trigger(place.marker, 'click');
   }
 };
-// Apply Knockout.js bindings
-ko.applyBindings(new ViewModel());
+// Store ViewModel in vm variable for instantiation in map.js
+var vm = new ViewModel();

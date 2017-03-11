@@ -34,7 +34,8 @@ for (i = 0; i < locations.length; i++) {
     icon: markerImg,
     animation: google.maps.Animation.DROP,
   });
-  markers.push(marker);
+  // markers.push(marker);
+  locations[i].marker = marker;
   bounds.extend(marker.position);
 
 /* Open info window and change marker to flash icon when marker is clicked
@@ -72,4 +73,6 @@ function googleErrorHandling() {
   errorDiv.innerHTML = errorMsg;
   mapDiv.appendChild(errorDiv);
 }
+// Apply Knockout.js bindings
+ko.applyBindings(vm);
 };
