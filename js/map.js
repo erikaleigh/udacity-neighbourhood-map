@@ -44,7 +44,6 @@ for (i = 0; i < locations.length; i++) {
   bounds.extend(marker.position);
   vm.locationList()[i].marker = marker;
 
-  console.log(vm.locationList()[0])
 
 /* Open info window and change marker to flash icon when marker is clicked
  * 'this' = marker

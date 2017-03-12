@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   font: 14px 'Open Sans', sans-serif;
   text-align: center;
-  color: #fff;
+  color: black;
 }
 
 h1 {
@@ -87,6 +87,10 @@ ul {
 
 .bl:hover {
   background-color: #5096b0;
+}
+
+.list-item:hover {
+  cursor: pointer;
 }
 
 .credits {
