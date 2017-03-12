@@ -29,7 +29,8 @@ ul {
   right: 0px;
 }
 
-.list-box {
+.container {
+  display: flex;
   background: #5096b0;
   background: -webkit-linear-gradient(-95deg, #5096b0, #50dcac);
   height: 100%;

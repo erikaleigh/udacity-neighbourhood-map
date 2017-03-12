@@ -48,7 +48,5 @@ var ViewModel = function() {
   }
 };
 // Store ViewModel in vm variable for instantiation in map.js
+
 var vm = new ViewModel();
-// Apply Knockout.js bindings
-ko.applyBindings(vm);
-console.log(vm.locationList()[0]);

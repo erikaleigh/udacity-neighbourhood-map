@@ -42,7 +42,9 @@ for (i = 0; i < locations.length; i++) {
     animation: google.maps.Animation.DROP,
   });
   bounds.extend(marker.position);
+  vm.locationList()[i].marker = marker;
 
+  console.log(vm.locationList()[0])
 
 /* Open info window and change marker to flash icon when marker is clicked
  * 'this' = marker
@@ -65,9 +67,7 @@ for (i = 0; i < locations.length; i++) {
         marker.setIcon('img/camera.png');
       });
     }
-    vm.locationList()[i].marker = marker;
   }
-
   map.fitBounds(bounds);
 }
 
@@ -81,5 +81,6 @@ function googleErrorHandling() {
   errorDiv.innerHTML = errorMsg;
   mapDiv.appendChild(errorDiv);
 }
+// Apply Knockout.js bindings
+ko.applyBindings(vm);
 };
-console.log(vm.locationList()[0]);
