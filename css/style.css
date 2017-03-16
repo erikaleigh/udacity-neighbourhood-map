@@ -73,6 +73,10 @@ ul {
   border-radius: 17px;
 }
 
+.all:hover {
+  background-color: #D5D5D5;
+}
+
 .org:hover {
   background-color: orange;
 }
@@ -89,7 +93,7 @@ ul {
   background-color: #5096b0;
 }
 
-.list-item:hover {
+.list-item:hover, .menu-button:hover  {
   cursor: pointer;
 }
 

@@ -42,11 +42,10 @@ var ViewModel = function() {
   });
 
   // filter visibility
-  self.filterItems = function() {
+  self.filterItems = function(location) {
       this.locationList(!self.isVisible);
-      this.marker.setVisible(false);
+      marker.setVisible(false);
   };
-
 
 
 // Knockout click event to initiate opening infoWindow when list item is clicked
