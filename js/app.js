@@ -42,6 +42,9 @@ var ViewModel = function() {
   });
 
   // filter visibility
+
+  this.lineOptions = ['orange', 'green', 'blue', 'yellow'];
+
   self.filterItems = function(location) {
       this.locationList(!self.isVisible);
       marker.setVisible(false);

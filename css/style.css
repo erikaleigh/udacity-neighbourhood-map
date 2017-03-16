@@ -45,56 +45,12 @@ ul {
   display: inline-block;
 }
 
-.menu:hover .button-content {
-  display: block;
-}
-
-.menu-button {
+.menu-items {
   font: 1em 'Montserrat', sans-serif;
   background: #fff;
   padding: 5px 15px;
   border: none;
   border-radius: 17px;
-}
-
-.button-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  border-radius: 17px;
-}
-
-.button-content a {
-  font: 1em 'Montserrat', sans-serif;
-  text-decoration: none;
-  color: black;
-  text-align: left;
-  padding: 10px 110px 10px 10px;
-  border-radius: 17px;
-}
-
-.all:hover {
-  background-color: #D5D5D5;
-}
-
-.org:hover {
-  background-color: orange;
-}
-
-.grn:hover {
-  background-color: #50dcac;
-}
-
-.yel:hover {
-  background-color: yellow;
-}
-
-.bl:hover {
-  background-color: #5096b0;
-}
-
-.list-item:hover, .menu-button:hover  {
-  cursor: pointer;
 }
 
 .credits {

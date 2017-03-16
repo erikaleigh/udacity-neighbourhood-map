@@ -14,14 +14,7 @@
           <img src="img/camera.png">
           <img src="img/flash.png"></h1>
         <div class="menu">
-          <button class="menu-button">Select a Metro Line</button>
-            <div class="button-content">
-              <a data-bind="click: filterItems" class="all" href="#">All</a>
-              <a data-bind="click: filterItems" class="org" href="#">Orange</a>
-              <a data-bind="click: filterItems" class="grn" href="#">Green</a>
-              <a data-bind="click: filterItems" class="yel" href="#">Yellow</a>
-              <a data-bind="click: filterItems" class="bl" href="#">Blue</a>
-            </div>
+          <select data-bind="options: lineOptions, optionsCaption: 'Choose a Metro Line', value: selectedLine" class="menu-items"></select>
         </div>
         <ul data-bind="foreach: locationList">
           <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
