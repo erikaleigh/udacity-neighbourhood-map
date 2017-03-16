@@ -31,6 +31,8 @@ var ViewModel = function() {
  */
  var Location = function(data) {
    this.title = ko.observable(data.title);
+   this.line = ko.observable(data.line);
+   this.isVisible = ko.observable(true);
  };
 
   self.locationList = ko.observableArray([]);
@@ -39,13 +41,21 @@ var ViewModel = function() {
     self.locationList.push( new Location(locationItem));
   });
 
+  // filter visibility
+  self.filterItems = function() {
+      this.locationList(!self.isVisible);
+      this.marker.setVisible(false);
+  };
+
+
 
 // Knockout click event to initiate opening infoWindow when list item is clicked
   self.markers = ko.observableArray([]);
 
   self.openWindow = function(place){
     google.maps.event.trigger(place.marker, 'click');
-  }
+  };
+
 };
 // Store ViewModel in vm variable for instantiation in map.js
 

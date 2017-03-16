@@ -16,14 +16,14 @@
         <div class="menu">
           <button class="menu-button">Select a Metro Line</button>
             <div class="button-content">
-              <a class="org" href="#">Orange</a>
-              <a class="grn" href="#">Green</a>
-              <a class="yel" href="#">Yellow</a>
-              <a class="bl" href="#">Blue</a>
+              <a data-bind="click: filterItems" class="org" href="#">Orange</a>
+              <a data-bind="click: filterItems" class="grn" href="#">Green</a>
+              <a data-bind="click: filterItems" class="yel" href="#">Yellow</a>
+              <a data-bind="click: filterItems" class="bl" href="#">Blue</a>
             </div>
         </div>
         <ul data-bind="foreach: locationList">
-          <li class="list-item" data-bind="text: title, click: $parent.openWindow"></li>
+          <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
         </ul>
         <div class="credits">
         <p>Credits
