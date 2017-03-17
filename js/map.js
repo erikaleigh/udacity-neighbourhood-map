@@ -45,27 +45,56 @@ for (i = 0; i < locations.length; i++) {
   vm.locationList()[i].marker = marker;
 
 
-/* Open info window and change marker to flash icon when marker is clicked
- * 'this' = marker
- */
+// Open info window and change marker to flash icon when marker is clicked 'this' = marker
   marker.addListener('click', function() {
     populateInfoWindow(this, infoWindow);
     this.setIcon('img/flash.png');
   });
 
-/* Populate infowindow with marker title when the marker is clicked
- * Check to make sure info window is not already open before performing
- */
+  // Wikipedia AJAX Request to add Wikipedia info about each metro station to infoWindow
+
+
+// Populate infowindow with marker title & wikipedia api info when the marker is clicked.
   function populateInfoWindow(marker, infowindow) {
-    if (infowindow.marker != marker) {
-      infowindow.marker = marker;
-      infowindow.setContent('<div>' + marker.title + '</div>');
-      infowindow.open(map, marker);
-      infowindow.addListener('closeclick', function() {
-        infowindow.setMarker = null;
-        marker.setIcon('img/camera.png');
-      });
-    }
+
+    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + marker.title + '_Montreal_Metro&prop=images&imlimit=5&format=json&callback=wikiCallback';
+
+    $.ajax({
+      url: wikiUrl,
+      dataType: 'jsonp'
+    }).done(function(data) {
+      console.log(data);
+      if (articleList === undefined) {
+        infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
+        infowindow.open(map, marker);
+      }
+
+    // Error handling for if no articles are returned from Wikipedia API
+      else {
+        var articleList = data[1];
+          for (i = 0; i < articleList.length; i++) {
+            articleStr = articleList[i];
+            var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+
+            if (infowindow.marker != marker) {
+              infowindow.marker = marker;
+              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3' + '<p>' + '<a href="' + url + '">' + '</p>' + '</div>');
+              infowindow.open(map, marker);
+
+              infowindow.addListener('closeclick', function() {
+                infowindow.setMarker = null;
+                marker.setIcon('img/camera.png');
+              });
+            }
+          }
+      }
+
+    // Error handling for if Wikipedia API call fails
+
+      }).fail(function() {
+        infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
+        infowindow.open(map, marker);
+    });
   }
   map.fitBounds(bounds);
 }

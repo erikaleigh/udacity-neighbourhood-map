@@ -15,7 +15,7 @@ For completion of [Udacity's Front-End Web Developer Nanodegree](https://www.uda
 
 **APIs**
 - This app uses the **Google Maps API**. Documentation can be found [here](https://developers.google.com/maps/documentation/)
-- This app uses the **Wiki Media API**. Documentation can be found [here]()
+- This app uses the **Media Wiki API**. Documentation can be found [here](https://www.mediawiki.org/wiki/API:Main_page)
 
 **Extra Help**
 - Used instructions for loading a Google Maps Javascript API from [Google's documentation](https://developers.google.com/maps/documentation/javascript/tutorial)
