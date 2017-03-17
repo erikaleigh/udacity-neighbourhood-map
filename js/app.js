@@ -30,8 +30,8 @@ var ViewModel = function() {
  * which is bound to the list view
  */
  var Location = function(data) {
-   this.title = ko.observable(data.title);
-   this.line = ko.observable(data.line);
+   this.title = data.title;
+   this.line = data.line;
    this.isVisible = ko.observable(true);
  };
 
@@ -43,12 +43,26 @@ var ViewModel = function() {
 
   // filter visibility
 
-  this.lineOptions = ['orange', 'green', 'blue', 'yellow'];
+  self.lineOptions = ['all lines', 'orange', 'green', 'blue', 'yellow'];
 
-  self.filterItems = function(location) {
-      this.locationList(!self.isVisible);
-      marker.setVisible(false);
-  };
+  self.selectedLine = ko.observable();
+
+  self.filterItems = ko.computed(function() {
+    var listItem = self.locationList();
+    var selectedLine = self.selectedLine();
+    for (var i = 0; i < listItem.length; i++) {
+      if (selectedLine = undefined) {
+        listItem[i].isVisible(true);
+      }
+      else if (selectedLine !== listItem[i].line) {
+        listItem[i].isVisible(false);
+      }
+      else {
+        listItem[i].isVisible(true);
+      }
+    }
+  });
+
 
 
 // Knockout click event to initiate opening infoWindow when list item is clicked
