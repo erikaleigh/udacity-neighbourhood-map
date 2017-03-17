@@ -58,12 +58,15 @@ var ViewModel = function() {
     for (var i = 0; i < listItem.length; i++) {
       if (selectedLine === self.lineOptions[0]) {
         listItem[i].isVisible(true);
+        // listItem[i].marker.setVisible(true);
       }
       else if (selectedLine !== listItem[i].line) {
         listItem[i].isVisible(false);
+        listItem[i].marker.setVisible(false);
       }
       else {
         listItem[i].isVisible(true);
+        listItem[i].marker.setVisible(true);
       }
     }
   });
