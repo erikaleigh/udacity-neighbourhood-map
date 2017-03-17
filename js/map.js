@@ -75,12 +75,10 @@ for (i = 0; i < locations.length; i++) {
         console.log('articleList is undefined');
       }
       else {
-            if (infowindow.marker != marker) {
               console.log(articleList);
               infowindow.marker = marker;
-              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'hello'+ '<a href="' + articleList + '">' + '</a>'+ '</p>' + '</div>');
+              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + '<a href="' + articleList + '">' + 'Wikipedia Article'+ '</a>'+ ' for ' + marker.title + ' Metro'+ '</p>' + '</div>');
               infowindow.open(map, marker);
-          }
       }
 
     // Error handling for if Wikipedia API call fails

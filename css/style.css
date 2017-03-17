@@ -17,13 +17,8 @@ h1 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: hotpink;
 }
-
-p {
-  font-color: hotpink;
-}
-
 
 ul {
   list-style: none;
