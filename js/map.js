@@ -66,18 +66,19 @@ for (i = 0; i < locations.length; i++) {
     }).done(function(data) {
       console.log(data);
 
-      var articleList = data[3][0];
-      console.log(articleList);
+      var articleUrl = data[3][0];
+      var articleDescr = data[2][0];
+      console.log(articleUrl, articleDescr);
       // Error handling for if no articles are returned from Wikipedia API
-      if (articleList === undefined) {
+      if (articleUrl === undefined) {
         infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
         infowindow.open(map, marker);
-        console.log('articleList is undefined');
+        console.log('articleUrl is undefined');
       }
       else {
-              console.log(articleList);
+              console.log(articleUrl);
               infowindow.marker = marker;
-              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + '<a href="' + articleList + '">' + 'Wikipedia Article'+ '</a>'+ ' for ' + marker.title + ' Metro'+ '</p>' + '</div>');
+              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + articleDescr + '<a href="' + articleUrl + '" target="blank">' + '..' + ' Read More'+ '</a>' + '</p>' + '</div>');
               infowindow.open(map, marker);
       }
 
