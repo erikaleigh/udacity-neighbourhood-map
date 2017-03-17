@@ -34,6 +34,7 @@ var ViewModel = function() {
    this.isVisible = ko.observable(true);
  };
 
+
   self.locationList = ko.observableArray([]);
 
 // Push all locations to an array - locationList
@@ -58,7 +59,10 @@ var ViewModel = function() {
     for (var i = 0; i < listItem.length; i++) {
       if (selectedLine === self.lineOptions[0]) {
         listItem[i].isVisible(true);
-        // listItem[i].marker.setVisible(true);
+        if (marker) {
+          listItem[i].marker.setVisible(true);
+        }
+
       }
       else if (selectedLine !== listItem[i].line) {
         listItem[i].isVisible(false);
@@ -71,10 +75,9 @@ var ViewModel = function() {
     }
   });
 
-
-// Knockout click event to initiate opening infoWindow when list item is clicked
   self.markers = ko.observableArray([]);
 
+// Knockout click event to initiate opening infoWindow when list item is clicked
   self.openWindow = function(place){
     google.maps.event.trigger(place.marker, 'click');
   };
