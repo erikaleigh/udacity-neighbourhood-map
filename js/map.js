@@ -80,7 +80,6 @@ for (i = 0; i < locations.length; i++) {
               infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3' + '<p>' + '<a href="' + url + '">' + '</p>' + '</div>');
               infowindow.open(map, marker);
             }
-
               infowindow.addListener('closeclick', function() {
                 infowindow.setMarker = null;
                 marker.setIcon('img/camera.png');
@@ -102,6 +101,11 @@ for (i = 0; i < locations.length; i++) {
       infowindow.setMarker = null;
       marker.setIcon('img/camera.png');
     });
+    google.maps.event.addListener(infowindow, 'closeclick', function() {
+      infowindow.close();
+      infowindow.setMarker = null;
+      marker.setIcon('img/camera.png');
+  });
   }
   map.fitBounds(bounds);
 }
