@@ -26,32 +26,37 @@ var y = "yellow";
 var ViewModel = function() {
   var self = this;
 
-/* Push the titles of all items in var locations to an observable array,
- * which is bound to the list view
- */
+ // Set up a Location constructor to be used to set the locations to the list view as well as for the markers.
  var Location = function(data) {
    this.title = data.title;
    this.line = data.line;
+   this.marker = data.marker;
    this.isVisible = ko.observable(true);
  };
 
   self.locationList = ko.observableArray([]);
 
+// Push all locations to an array - locationList
+
   locations.forEach(function(locationItem) {
     self.locationList.push( new Location(locationItem));
   });
 
-  // filter visibility
+// Set up dropdown menu options for filtering the list view and markers
 
   self.lineOptions = ['all lines', 'orange', 'green', 'blue', 'yellow'];
 
-  self.selectedLine = ko.observable();
+// Initialize the selectedLine as "all lines" to set default of all list items and markers showing upon load
+
+  self.selectedLine = ko.observable(self.lineOptions[0]);
+
+// Filter list items corresponding markers according to their .line property (which metro line they fall on). Toggle visibility if corresponding line is selected
 
   self.filterItems = ko.computed(function() {
     var listItem = self.locationList();
     var selectedLine = self.selectedLine();
     for (var i = 0; i < listItem.length; i++) {
-      if (selectedLine = undefined) {
+      if (selectedLine === self.lineOptions[0]) {
         listItem[i].isVisible(true);
       }
       else if (selectedLine !== listItem[i].line) {
@@ -64,7 +69,6 @@ var ViewModel = function() {
   });
 
 
-
 // Knockout click event to initiate opening infoWindow when list item is clicked
   self.markers = ko.observableArray([]);
 
@@ -74,5 +78,4 @@ var ViewModel = function() {
 
 };
 // Store ViewModel in vm variable for instantiation in map.js
-
 var vm = new ViewModel();

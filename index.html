@@ -14,7 +14,8 @@
           <img src="img/camera.png">
           <img src="img/flash.png"></h1>
         <div class="menu">
-          <select data-bind="options: lineOptions, optionsCaption: 'Choose a Metro Line', value: selectedLine" class="menu-items"></select>
+          <h4>Choose a Metro Line</h4>
+          <select data-bind="options: lineOptions, value: selectedLine" class="menu-items"></select>
         </div>
         <ul data-bind="foreach: locationList">
           <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
