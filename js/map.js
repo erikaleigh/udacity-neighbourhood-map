@@ -68,7 +68,6 @@ for (i = 0; i < locations.length; i++) {
         infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
         infowindow.open(map, marker);
       }
-
     // Error handling for if no articles are returned from Wikipedia API
       else {
         var articleList = data[1];
@@ -80,12 +79,12 @@ for (i = 0; i < locations.length; i++) {
               infowindow.marker = marker;
               infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3' + '<p>' + '<a href="' + url + '">' + '</p>' + '</div>');
               infowindow.open(map, marker);
+            }
 
               infowindow.addListener('closeclick', function() {
                 infowindow.setMarker = null;
                 marker.setIcon('img/camera.png');
               });
-            }
           }
       }
 
@@ -94,6 +93,14 @@ for (i = 0; i < locations.length; i++) {
       }).fail(function() {
         infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
         infowindow.open(map, marker);
+
+    });
+
+  // Close info window and change marker back to camera when user clicks on the map
+    google.maps.event.addListener(map, 'click', function() {
+      infowindow.close();
+      infowindow.setMarker = null;
+      marker.setIcon('img/camera.png');
     });
   }
   map.fitBounds(bounds);
