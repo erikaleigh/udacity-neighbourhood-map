@@ -10,7 +10,7 @@ var y = "yellow";
  var locations = [
    {line: g, title: "McGill", location: {lat: 45.5045824, lng: -73.5718572}},
    {line: g, title: "Place des Arts", location: {lat: 45.5081846, lng: -73.5679968}},
-   {line: g, title: "Peel Montreal", location: {lat: 45.50083, lng: -73.5752449}},
+   {line: g, title: "Peel", location: {lat: 45.50083, lng: -73.5752449}},
    {line: g, title: "Atwater", location: {lat: 45.4898065, lng: -73.58632469999999}},
    {line: y, title: "Berri-UQAM", location: {lat: 45.5141806, lng: -73.5617994}},
    {line: o, title: "Laurier", location: {lat: 45.527522, lng: -73.58905589999999 }},
