@@ -51,7 +51,7 @@ for (i = 0; i < locations.length; i++) {
     this.setIcon('img/flash.png');
   });
 
-  // Wikipedia AJAX Request to add Wikipedia info about each metro station to infoWindow
+
 
 
 // Populate infowindow with marker title & wikipedia api info when the marker is clicked.
@@ -59,28 +59,27 @@ for (i = 0; i < locations.length; i++) {
 
     var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
 
+  // Wikipedia AJAX Request to add Wikipedia entry on selected metro station to infoWindow
     $.ajax({
       url: wikiUrl,
       dataType: 'jsonp'
     }).done(function(data) {
       console.log(data);
 
+      var articleList = data[3][0];
+      console.log(articleList);
       // Error handling for if no articles are returned from Wikipedia API
       if (articleList === undefined) {
         infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'Sorry no wikipedia entries could be found to match this station.' + '</p>'+ '</div>');
         infowindow.open(map, marker);
+        console.log('articleList is undefined');
       }
       else {
-        var articleList = data[1];
-          for (i = 0; i < articleList.length; i++) {
-            articleStr = articleList[i];
-            var url = 'http://en.wikipedia.org/wiki/' + articleStr;
-
             if (infowindow.marker != marker) {
+              console.log(articleList);
               infowindow.marker = marker;
-              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3' + '<p>' + '<a href="' + url + '">' + '</a>'+ '</p>' + '</div>');
+              infowindow.setContent('<div>' + '<h3>' + marker.title + '</h3>' + '<p>' + 'hello'+ '<a href="' + articleList + '">' + '</a>'+ '</p>' + '</div>');
               infowindow.open(map, marker);
-              };
           }
       }
 

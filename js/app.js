@@ -18,7 +18,7 @@ var y = "yellow";
    {line: o, title: "Jarry", location: {lat: 45.5433543, lng: -73.6285032}},
    {line: o, title: "Bonaventure", location: {lat: 45.497977, lng: -73.5676258}},
    {line: b, title: "Jean-Talon", location: {lat: 45.5389207, lng: -73.6141987}},
-   {line: b, title: "St-Michel", location: {lat: 45.5599217, lng: -73.6000536}},
+   {line: b, title: "Saint-Michel", location: {lat: 45.5599217, lng: -73.6000536}},
 ];
 
 // View Model - data control and storage

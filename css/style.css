@@ -20,6 +20,11 @@ a {
   color: black;
 }
 
+p {
+  font-color: hotpink;
+}
+
+
 ul {
   list-style: none;
 }
