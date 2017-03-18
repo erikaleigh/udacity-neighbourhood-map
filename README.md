@@ -1,8 +1,8 @@
-# Montréal Neighbourhood Map
+# Montréal Metro Photobooth Map
 For completion of [Udacity's Front-End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
 
 #### To use this app:
-- Either clone or download the repo, and open `index.html` or visit the [live site](URL)
+- Either clone or download the repo, and open `index.html` or visit the [live site](https://erikaleigh.github.io/udacity-neighbourhood-map/)
 
 -----
 ### Credits:
