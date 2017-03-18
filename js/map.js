@@ -8,7 +8,6 @@ var marker;
 var markers = [];
 
 
-
 // Initialize Google Map
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
