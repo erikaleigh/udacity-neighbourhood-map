@@ -7,6 +7,8 @@ var map;
 var marker;
 var markers = [];
 
+
+
 // Initialize Google Map
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -50,9 +52,6 @@ for (i = 0; i < locations.length; i++) {
     populateInfoWindow(this, infoWindow);
     this.setIcon('img/flash.png');
   });
-
-
-
 
 // Populate infowindow with marker title & wikipedia api info when the marker is clicked.
   function populateInfoWindow(marker, infowindow) {
@@ -105,16 +104,22 @@ for (i = 0; i < locations.length; i++) {
   map.fitBounds(bounds);
 }
 
-// Error handling for google maps api
-function googleErrorHandling() {
-  var errorMsg = 'Sorry, this app couldn\'t be displayed. Please try again later.';
 
-  var mapDiv = document.getElementById('map');
-  var errorDiv = document.createElement('p');
-
-  errorDiv.innerHTML = errorMsg;
-  mapDiv.appendChild(errorDiv);
-}
 // Apply Knockout.js bindings
 ko.applyBindings(vm);
 };
+
+// Error handling for google maps api
+
+function mapErrorHandling() {
+    var errorMsg = 'Sorry, no worky. Please refresh and try again!';
+
+    var mapDiv = document.getElementById('map');
+    var errorDiv = document.createElement('p');
+    errorDiv.innerHTML = errorMsg;
+    mapDiv.appendChild(errorDiv);
+
+    var errorImg = document.createElement('img');
+    errorImg.src = 'img/sad.png';
+    mapDiv.appendChild(errorImg);
+}
