@@ -24,29 +24,36 @@ ul {
   list-style: none;
 }
 
-#map {
-  bottom: 0px;
+#mapDiv {
   height: 100%;
-  left: 362px;
-  position: absolute;
-  right: 0px;
+  width: 75%;
+}
+
+#map {
+  height: 100%;
+  max-width: 100%;
 }
 
 .container {
   display: flex;
+  max-width: 1000px;
+  height: inherit;
+}
+
+.list-box {
   background: #5096b0;
   background: -webkit-linear-gradient(-95deg, #5096b0, #50dcac);
   height: 100%;
   line-height: 35px;
-  padding: 10px 10px 30px 10px;
+  padding: 20px 10px 30px 20px;
   text-align: left;
-  width: 342px;
+  max-width: 25%;
+
+  /*-webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  transition: transform 0.3s ease;*/
 }
 
-.menu {
-  position: relative;
-  display: inline-block;
-}
 
 .menu-items {
   font: 1em 'Montserrat', sans-serif;
@@ -63,6 +70,8 @@ ul {
 .credits {
   font-size: 0.75em;
   font-family: 'Montserrat', sans-serif;
+  line-height: 18px;
+  padding-top: 20px;
 }
 
 /* media queries */

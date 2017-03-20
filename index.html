@@ -2,35 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Montréal Neighbourhood Map</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
   </head>
+
   <body>
   <!-- Open list container -->
     <section class="container">
       <section class="list-box">
-        <h1>Montréal Metro Photobooth Map!
-          <img src="img/camera.png">
-          <img src="img/flash.png"></h1>
-        <div class="menu">
-          <h4>Select a Metro Line</h4>
-          <select data-bind="options: lineOptions, value: selectedLine" class="menu-items"></select>
-        </div>
-        <ul data-bind="foreach: locationList">
-          <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
-        </ul>
-        <div class="credits">
-        <p>Credits
-          <br/>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/" target="blank">Fight Boredom Distro</a>
-          <br/>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki" target="blank">MediaWiki API</a>
-          </p>
+          <h1>Montréal Metro Photobooth Map!
+            <img src="img/camera.png">
+            <img src="img/flash.png"></h1>
+          <div class="menu">
+            <h4>Select a Metro Line</h4>
+            <select data-bind="options: lineOptions, value: selectedLine" class="menu-items"></select>
+          </div>
+          <ul data-bind="foreach: locationList">
+            <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
+          </ul>
+          <div class="credits">
+            <h4>Credits</h4>
+              <p>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/" target="blank">Fight Boredom Distro</a>
+              <br/>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki" target="blank">MediaWiki API</a>
+              </p>
         </div>
       </section>
-    </section>
-    <!-- Close container -->
+
+
     <!-- Add Google map -->
-    <div id="map"></div>
+    <div id="mapDiv">
+      <div id="map"></div>
+    </div>
+
+  </section>
+  <!-- Close container -->
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="mapErrorHandling()"></script>
     <script src="js/libs/jquery-3.1.1.min.js"></script>
     <script src="js/libs/knockout-3.4.1.js"></script>

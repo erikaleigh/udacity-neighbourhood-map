@@ -98,6 +98,11 @@ for (i = 0; i < locations.length; i++) {
       infowindow.setMarker = null;
       marker.setIcon('img/camera.png');
   });
+    google.maps.event.addDomListener(window, 'resize', function() {
+      console.log('resize');
+      bounds = new google.maps.LatLngBounds({lat: 45.495695, lng: -73.579393}, {lat: 45.519594, lng: -73.560342});
+      map.fitBounds(bounds);
+  });
   }
   map.fitBounds(bounds);
 }
