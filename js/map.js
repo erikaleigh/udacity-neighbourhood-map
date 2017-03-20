@@ -45,7 +45,6 @@ for (i = 0; i < locations.length; i++) {
   bounds.extend(marker.position);
   vm.locationList()[i].marker = marker;
 
-
 // Open info window and change marker to flash icon when marker is clicked 'this' = marker
   marker.addListener('click', function() {
     populateInfoWindow(this, infoWindow);
@@ -100,9 +99,13 @@ for (i = 0; i < locations.length; i++) {
   });
     google.maps.event.addDomListener(window, 'resize', function() {
       console.log('resize');
-      bounds = new google.maps.LatLngBounds({lat: 45.495695, lng: -73.579393}, {lat: 45.519594, lng: -73.560342});
-      map.fitBounds(bounds);
+      map.setCenter({lat:45.501556, lng:-73.567621});
   });
+
+      // map.setCenter(new google.maps.LatLng(45.501556,  -73.567621));
+      // var bounds = new google.maps.LatLngBounds({lat: 45.495695, lng: -73.579393}, {lat: 45.519594, lng: -73.560342});
+      // map.fitBounds(bounds);
+
   }
   map.fitBounds(bounds);
 }

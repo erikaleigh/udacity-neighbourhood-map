@@ -40,6 +40,11 @@ ul {
   width: 100%;
 }
 
+.hamburger {
+  display: none;
+}
+
+
 .container {
   width: 100%
 }
@@ -48,16 +53,15 @@ ul {
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 99;
   background: #5096b0;
   background: -webkit-linear-gradient(-95deg, #5096b0, #50dcac);
   padding: 20px 10px 0 20px;
   text-align: left;
-  width: 30%;
+  width: 25%;
+}
 
-  /*-webkit-transform: translate(-300px, 0);
-  transform: translate(-300px, 0);
-  transition: transform 0.3s ease;*/
+.list-box-contents {
+  width: 100%;
 }
 
 .title {
@@ -85,3 +89,17 @@ ul {
 }
 
 /* media queries */
+
+
+/*.hamburger {
+  position: absolute;
+  height: 60px;
+  left: 20px;
+  top: 70px;
+}*/
+
+/*.list-box {
+  -webkit-transform: translate(-400px, 0);
+  transform: translate(-400px, 0);
+  transition: transform 0.3s ease;
+}*/
