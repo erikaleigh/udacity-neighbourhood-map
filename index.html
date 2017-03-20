@@ -11,22 +11,28 @@
   <body>
   <!-- Open list container -->
     <section class="container">
+
       <section class="list-box">
+        <div class="list-box-contents">
           <h1>Montréal Metro Photobooth Map!
             <img src="img/camera.png">
             <img src="img/flash.png"></h1>
+
           <div class="menu">
             <h4>Select a Metro Line</h4>
-            <select data-bind="options: lineOptions, value: selectedLine" class="menu-items"></select>
+            <select class="menu-items" data-bind="options: lineOptions, value: selectedLine"></select>
+            <ul data-bind="foreach: locationList">
+              <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
+            </ul>
           </div>
-          <ul data-bind="foreach: locationList">
-            <li class="list-item" data-bind="text: title, click: $parent.openWindow, visible: isVisible"></li>
-          </ul>
+
           <div class="credits">
             <h4>Credits</h4>
               <p>Photobooth data courtesy of <a href="https://fight-boredom.com/2016/03/11/critical-breakfast-2-and-a-montreal-photobooth-map/" target="blank">Fight Boredom Distro</a>
               <br/>This app utilizes the <a href="https://www.mediawiki.org/wiki/MediaWiki" target="blank">MediaWiki API</a>
               </p>
+          </div>
+          
         </div>
       </section>
 
