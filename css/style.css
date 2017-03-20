@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -12,7 +18,7 @@ h1, h4 {
   color: #fff;
 }
 h1 {
-  font-size: 2.75rem;
+  font-size: 2rem;
 }
 
 a {
@@ -26,34 +32,36 @@ ul {
 
 #mapDiv {
   height: 100%;
-  width: 75%;
+  width: 100%;
 }
 
 #map {
   height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .container {
-  display: flex;
-  height: inherit;
+  width: 100%
 }
 
 .list-box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
   background: #5096b0;
   background: -webkit-linear-gradient(-95deg, #5096b0, #50dcac);
-  padding: 20px 10px 30px 20px;
+  padding: 20px 10px 0 20px;
   text-align: left;
-  max-width: 25%;
-  overflow: auto;
+  width: 30%;
 
   /*-webkit-transform: translate(-300px, 0);
   transform: translate(-300px, 0);
   transition: transform 0.3s ease;*/
 }
 
-.list-box-contents {
-
+.title {
+  padding-bottom: 10px;
 }
 
 .menu-items {
