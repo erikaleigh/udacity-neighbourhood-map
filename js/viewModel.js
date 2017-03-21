@@ -63,11 +63,3 @@ var ViewModel = function() {
 };
 // Store ViewModel in vm variable for instantiation in map.js
 var vm = new ViewModel();
-
-var nav = document.getElementById('hamburger');
-var drawer = document.getElementById('list-box');
-
-nav.addEventListener('click', function(e) {
-  drawer.classList.toggle('list-box-open');
-  e.stopPropagation();
-});

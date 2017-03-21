@@ -40,20 +40,17 @@ ul {
   width: 100%;
 }
 
-#hamburger {
-  display: none;
-}
-
 
 .container {
   width: 100%;
 }
 
-#list-box {
+.list-box {
   position: absolute;
   height: auto;
   top: 0px;
   left: 0px;
+  z-index: 60;
   background: #5096b0;
   background: -webkit-linear-gradient(-95deg, #5096b0, #50dcac);
   padding: 20px 10px 0 20px;
@@ -92,7 +89,7 @@ ul {
 /* media queries */
 
 @media screen and (max-width: 770px) {
-  #hamburger {
+  .hamburger {
     display: block;
     position: absolute;
     cursor: pointer;
@@ -101,7 +98,7 @@ ul {
     top: 70px;
   }
 
-  #list-box {
+  .list-box {
     -webkit-transform: translate(-400px, 0);
     transform: translate(-400px, 0);
     transition: transform 0.3s ease;
@@ -111,5 +108,4 @@ ul {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-
 }
