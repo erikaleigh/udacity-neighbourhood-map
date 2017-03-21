@@ -98,7 +98,7 @@ ul {
     position: absolute;
     cursor: pointer;
     height: 60px;
-    right: 20px;
+    right: 30px;
     top: 40px;
     opacity: 0.8;
   }
@@ -107,7 +107,7 @@ ul {
     -webkit-transform: translate(-400px, 0);
     transform: translate(-400px, 0);
     transition: transform 0.3s ease;
-    width: 250px;
+    width: 225px;
   }
 
   .list-box-open {
@@ -118,6 +118,6 @@ ul {
 
 @media screen and (max-width: 340px) {
   .list-box {
-    width: 225px;
+    width: 200px;
   }
 }

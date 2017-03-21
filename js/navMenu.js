@@ -12,10 +12,3 @@ $('.hamburger').on('click', function() {
 $('.list-item').on('click', function() {
   $('list-box').toggleClass('list-box-open');
 });
-
-// 
-// $( document ).ready(function() {
-//   console.log('working');
-//   var sideHeight = $('.list-box').outerHeight();
-//   $('#mapDiv').height(sideHeight);
-// });
