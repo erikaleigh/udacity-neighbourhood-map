@@ -92,7 +92,7 @@ ul {
 
 /* media queries */
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 767px) {
   .hamburger {
     display: block;
     position: absolute;
