@@ -1,5 +1,7 @@
-// Event listener for toggling mobile navigation
+// jQuery event for toggling mobile nav in and out
 
 $('.hamburger').on('click', function() {
   $('.list-box').toggleClass('list-box-open')
 });
+
+//
