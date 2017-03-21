@@ -11,7 +11,6 @@ var ViewModel = function() {
    this.isVisible = ko.observable(true);
  };
 
-
   self.locationList = ko.observableArray([]);
 
 // Push all locations to an array - locationList

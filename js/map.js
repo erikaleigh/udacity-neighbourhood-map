@@ -104,6 +104,7 @@ for (i = 0; i < locations.length; i++) {
     google.maps.event.addDomListener(window, 'resize', function() {
       console.log('resize');
       map.setCenter({lat:45.501556, lng:-73.567621});
+      map.fitBounds(bounds);
   });
   }
   map.fitBounds(bounds);

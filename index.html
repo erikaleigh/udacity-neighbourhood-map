@@ -6,6 +6,10 @@
     <title>Montréal Photobooth Map</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <script src="js/libs/jquery-3.1.1.min.js"></script>
+    <script src="js/libs/knockout-3.4.1.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="mapErrorHandling()"></script>
+
   </head>
 
   <body>
@@ -47,10 +51,6 @@
 
   </section>
   <!-- Close container -->
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5AbPmlDlDnZ2D3rLzXHAdznIyMhea9KY&callback=initMap" onerror="mapErrorHandling()"></script>
-    <script src="js/libs/jquery-3.1.1.min.js"></script>
-    <script src="js/libs/knockout-3.4.1.js"></script>
     <script src="js/model.js"></script>
     <script src="js/map.js"></script>
     <script src="js/viewModel.js"></script>
