@@ -118,7 +118,7 @@ ul {
 
 @media screen and (max-width: 340px) {
   .hamburger {
-    right: 40px;
+    height: 50px;
   }
 
 
