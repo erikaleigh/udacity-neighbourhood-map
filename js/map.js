@@ -26,7 +26,10 @@ function initMap() {
          transitLayer.setMap(map);
 
 // Initialize info windows and map bounds
-var infoWindow = new google.maps.InfoWindow();
+var infoWindow = new google.maps.InfoWindow(
+  {
+    maxWidth: 150
+  });
 var bounds = new google.maps.LatLngBounds();
 
 // Add markers from locations listed in model - var locations
