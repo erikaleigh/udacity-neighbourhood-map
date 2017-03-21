@@ -3,7 +3,7 @@
 var ViewModel = function() {
   var self = this;
 
- // Set up a Location constructor to be used to set the locations to the list view as well as for the markers.
+ // Set up a Location constructor to be used to set the locations to the list view as well as for markers
  var Location = function(data) {
    this.title = data.title;
    this.line = data.line;

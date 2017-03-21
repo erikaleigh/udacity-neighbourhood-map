@@ -1,14 +1,13 @@
-/*
- * GOOGLE MAPS
- * Use JavaScript API to initialize map, markers and info windows
- */
+// GOOGLE MAPS
+// Use JavaScript API to initialize map, markers and info windows
 
+// Set these variables as global for use in other parts of app
 var map;
 var marker;
 var markers = [];
 
 
-// Initialize Google Map
+// Initialize function from callback
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 45.5017, lng: -73.5673},
@@ -54,7 +53,7 @@ for (i = 0; i < locations.length; i++) {
     this.setIcon('img/flash.png');
   });
 
-// Populate infowindow with marker title & wikipedia api info when the marker is clicked.
+// Populate infowindow with marker title & wikipedia API info when the marker is clicked
   function populateInfoWindow(marker, infowindow) {
 
     var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
@@ -89,7 +88,9 @@ for (i = 0; i < locations.length; i++) {
 
     });
 
-  // Close info window and change marker back to camera when user clicks on the map
+  // Google Maps event listeners:
+  // Close info window and change marker back to camera when user clicks on the // x in the infoWindow or anywhere on the map, reset map center for window
+  // resize
     google.maps.event.addListener(map, 'click', function() {
       infowindow.close();
       infowindow.setMarker = null;
@@ -104,15 +105,9 @@ for (i = 0; i < locations.length; i++) {
       console.log('resize');
       map.setCenter({lat:45.501556, lng:-73.567621});
   });
-
-      // map.setCenter(new google.maps.LatLng(45.501556,  -73.567621));
-      // var bounds = new google.maps.LatLngBounds({lat: 45.495695, lng: -73.579393}, {lat: 45.519594, lng: -73.560342});
-      // map.fitBounds(bounds);
-
   }
   map.fitBounds(bounds);
 }
-
 
 // Apply Knockout.js bindings
 ko.applyBindings(vm);
@@ -131,4 +126,4 @@ function mapErrorHandling() {
     var errorImg = document.createElement('img');
     errorImg.src = 'img/sad.png';
     mapDiv.appendChild(errorImg);
-}
+};
