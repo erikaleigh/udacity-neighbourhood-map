@@ -44,7 +44,6 @@ ul {
   display: none;
 }
 
-
 .container {
   width: 100%;
 }
@@ -106,10 +105,17 @@ ul {
     -webkit-transform: translate(-400px, 0);
     transform: translate(-400px, 0);
     transition: transform 0.3s ease;
+    width: 250px;
   }
 
   .list-box-open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .list-box {
+    width: 225px;
   }
 }
