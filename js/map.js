@@ -52,6 +52,7 @@ function initMap() {
     // Open info window and change marker to flash icon when marker is clicked 'this' = marker
     marker.addListener('click', function() {
       toggleBounce(this);
+      map.panTo(marker.getPosition());
       populateInfoWindow(this, infoWindow);
     });
 
@@ -59,8 +60,8 @@ function initMap() {
       marker.setAnimation(google.maps.Animation.BOUNCE);
       setTimeout(function() {
         marker.setAnimation(null)
-      }, 1000);
-  }
+      }, 1500);
+    }
 
     // Populate infowindow with marker title & wikipedia API info when the marker is clicked
     var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
@@ -101,12 +102,10 @@ function initMap() {
       google.maps.event.addListener(map, 'click', function() {
         infowindow.close();
         infowindow.setMarker = null;
-        marker.setIcon('img/camera.png');
       });
       google.maps.event.addListener(infowindow, 'closeclick', function() {
         infowindow.close();
         infowindow.setMarker = null;
-        marker.setIcon('img/camera.png');
       });
       google.maps.event.addDomListener(window, 'resize', function() {
         map.setCenter({
