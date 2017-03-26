@@ -4,19 +4,22 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 14px 'Open Sans', sans-serif;
+  font: 14px "Open Sans", sans-serif;
   text-align: center;
   color: black;
 }
 
-h1, h4 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h4 {
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+
 h1 {
   font-size: 2rem;
 }
@@ -30,7 +33,7 @@ ul {
   list-style: none;
 }
 
-#mapDiv {
+#map-div {
   height: 100%;
   width: 100%;
 }
@@ -71,7 +74,7 @@ ul {
 }
 
 .menu-items {
-  font: 1em 'Montserrat', sans-serif;
+  font: 1em "Montserrat", sans-serif;
   background: #fff;
   padding: 5px 15px;
   border: none;
@@ -85,7 +88,7 @@ ul {
 
 .credits {
   font-size: 0.75em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 18px;
   padding-top: 15px;
 }
@@ -121,6 +124,4 @@ ul {
     height: 50px;
     right: 43px;
   }
-
-
 }
