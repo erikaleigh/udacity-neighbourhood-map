@@ -42,13 +42,6 @@ var locations = [{
   }
 }, {
   line: o,
-  title: "Laurier",
-  location: {
-    lat: 45.527522,
-    lng: -73.58905589999999
-  }
-}, {
-  line: o,
   title: "Sherbrooke",
   location: {
     lat: 45.5190038,
