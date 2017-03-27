@@ -64,14 +64,17 @@ function initMap() {
     }
 
     // Populate infowindow with marker title & wikipedia API info when the marker is clicked
-    var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
+
 
     function populateInfoWindow(marker, infowindow) {
+
+      var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
       // Wikipedia AJAX Request to add Wikipedia entry on selected metro station to infoWindow
       $.ajax({
         url: wikiUrl,
         dataType: 'jsonp'
       }).done(function(data) {
+        console.log(data);
 
         var articleUrl = data[3][0];
         var articleDescr = data[2][0];
