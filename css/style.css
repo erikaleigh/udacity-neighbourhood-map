@@ -63,6 +63,8 @@ ul {
   text-align: left;
   width: 320px;
   opacity: 0.9;
+  max-height: 100vh;
+  overflow: scroll;
 }
 
 .list-box-contents {
