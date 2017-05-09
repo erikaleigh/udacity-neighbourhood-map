@@ -68,7 +68,7 @@ function initMap() {
 
     function populateInfoWindow(marker, infowindow) {
 
-      var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '_(Montreal_Metro)&imlimit=5&format=json&callback=wikiCallback';
+      var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + marker.title + '&imlimit=5&format=json&callback=wikiCallback';
       // Wikipedia AJAX Request to add Wikipedia entry on selected metro station to infoWindow
       $.ajax({
         url: wikiUrl,
